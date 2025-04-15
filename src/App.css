@@ -1,0 +1,182 @@
+body{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+*{
+  box-sizing: border-box;
+}
+
+
+.app-container{
+  background:linear-gradient(to bottom,skyblue,dodgerblue);
+  min-height: calc(100vh - 17px);
+  padding: 10px 10px;
+  border-radius: 10px;
+  
+}
+.top-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.input-container,form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap:10px;
+  align-items: start;
+  background-color: white;
+  width: inherit;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.input-container{
+  padding: 10px
+}
+form{
+  width: 100%;
+}
+h1{
+  font-size: 24px;
+  font-weight: 700;
+  margin: 4px 0px;
+}
+h4{
+  font-size: 18px;
+  margin: 4px 0px;
+}
+.input-wrapper{
+  position: relative;
+  width: 100%;
+}
+.input{
+  width: 100%;
+  height: 50px;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border-width: 0px;
+  border:1px solid black;
+  color: magenta;
+  font-size: 18px;
+  font-weight: 600;
+  
+}
+
+label{
+  position: absolute;
+  left: 0;
+  top:15px;
+  pointer-events: none;
+  left: 10px;
+  color: black;
+  transition: all 0.5s ease;
+}
+
+.input:valid+label,
+.input:focus+label{
+  top:-10px;
+  background: white;
+  color:magenta
+}
+button{
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+  outline: none;
+  border-width: 0px;
+  border-radius: 10px;
+  background:linear-gradient(90deg,dodgerblue 30%,magenta);
+  color:white;
+  font-size: 17px;
+  font-weight: 600;
+}
+.image{
+  width: 100%;
+  margin-top: 15px;
+}
+.hr{
+  border: 1px solid grey;
+  margin: 20px 10px;
+}
+
+.comment-length{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.length{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:linear-gradient(to right,dodgerblue,magenta);
+  padding: 10px;
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  border-radius: 4px;
+  color:white;
+  font-weight: 600;
+}
+
+.main-data{
+  background-color: white;
+  margin: 10px 0px;
+  border-radius: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.data-container{
+  display: flex;
+  align-items: center;
+  gap:10px;
+}
+.name-and-time{
+  display: flex;
+  align-items: center;
+  gap:10px
+}
+
+.initial{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.each-name,time,p{
+  margin: 4px 0px;
+}
+.bottom-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.like-container{
+  display: flex;
+  align-items: center;
+  gap:10px;
+  cursor: pointer;
+}
+.icon{
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+@media screen and (min-width:768px){
+  .app-container{
+    background: linear-gradient(to right, skyblue,dodgerblue);
+  }
+  .top-container{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .initial{
+    width: 30px;
+    height: 30px;
+  }
+}
