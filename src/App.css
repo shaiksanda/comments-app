@@ -6,7 +6,6 @@ body {
   box-sizing: border-box;
 }
 .comments-heading{
-  font-family: "Roboto";
   font-size: 50px;
   background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.4msaZmSWaHLTteZr59mSwQHaEK%26pid%3DApi&f=1&ipt=0bf83275f37be5f74de277c0b195bb036608fc38923ec49c11dbb8c0bb198e29&ipo=images");
   background-clip: text;
@@ -14,6 +13,11 @@ body {
   background-position: center;
   -webkit-background-clip: text;
   color: transparent;
+  transition: 0.5s ease;
+}
+.comments-heading:hover{
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.eTH0_0prcoB-AVKi8MDcPwHaFS%26pid%3DApi&f=1&ipt=f3266d79293d7adc0c2beabe53a22d94c1ba560154c5eda54cdc060eb37fa076&ipo=images");
+  transform: scale(1.04);
 }
 
 .app-container {
@@ -42,6 +46,7 @@ form {
   width: inherit;
   border-radius: 10px;
   cursor: pointer;
+  width: 100%;
 }
 
 .input-container {
@@ -112,6 +117,9 @@ button {
   font-size: 17px;
   font-weight: 600;
 }
+button:hover{
+  background: linear-gradient(to right,magenta,dodgerblue);
+}
 
 .image {
   width: 100%;
@@ -146,20 +154,21 @@ button {
 .main-data {
   background: #e0e0e0;
   border-radius: 20px;
-
   margin: 10px 0px;
-
   box-shadow:
     8px 8px 16px #97a3de,
     inset -8px -8px 16px #ffffff;
-
   padding: 5px 10px;
   cursor: pointer;
+  transition: 0.5s ease;
 }
-
+.main-data:hover{
+  transform: scale(1.04);
+}
 .data-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 10px;
 
 }
@@ -170,20 +179,18 @@ button {
   gap: 10px
 }
 
-.initial {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-}
 
+.each-name{
+  max-width: 150px;
+  color:magenta
+}
 .each-name,
 time,
 p {
   margin: 4px 0px;
+}
+.comment{
+  color: maroon;
 }
 
 .bottom-container {
@@ -204,7 +211,11 @@ p {
   width: 20px;
   height: 20px;
 }
-
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-gap: 10px;
+}
 @media screen and (min-width:768px) {
   .app-container {
     background: linear-gradient(to right, skyblue, dodgerblue);
@@ -214,9 +225,20 @@ p {
     flex-direction: row;
     justify-content: space-between;
   }
+  .input-container{
+    width: 50%;
+  }
 
   .initial {
     width: 30px;
     height: 30px;
+  }
+  .grid-container{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+@media screen and (min-width:992px){
+  .grid-container{
+    grid-template-columns: repeat(3,1fr);
   }
 }

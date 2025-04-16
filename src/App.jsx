@@ -109,29 +109,31 @@ const App = () => {
         <div className="length">{comments.length}</div>
         <div><h1>Comments</h1></div>
       </div>
-      {comments.map(each => (
-        <div key={each.id} className="main-data">
-          <div className="data-container">
-            <div style={{ backgroundColor: getBackground() }} className="initial">{each.name[0]}</div>
-            <div>
-              <div className="name-and-time">
-                <h1 className="each-name">{each.name}</h1>
-                <p className="time">{timeAgo(each.createdAt)}</p>
+      <div className="grid-container">
+        {comments.map(each => (
+          <div key={each.id} className="main-data">
+            <div className="data-container">
+              
+              <div>
+                <div className="name-and-time">
+                  <h1 className="each-name">{each.name}</h1>
+                  <p className="time">{timeAgo(each.createdAt)}</p>
+                </div>
+                <p className="comment">{each.comment}</p>
               </div>
-              <p>{each.comment}</p>
             </div>
-          </div>
-          <div className="bottom-container">
-            <div onClick={() => handleLike(each.id)} className="like-container">
-              <img className="icon" src={each.isLiked ? "https://assets.ccbp.in/frontend/react-js/comments-app/liked-img.png" : "https://assets.ccbp.in/frontend/react-js/comments-app/like-img.png"} alt="" />
-              <p>{each.isLiked ? "Liked" : "Like"}</p>
+            <div className="bottom-container">
+              <div onClick={() => handleLike(each.id)} className="like-container">
+                <img className="icon" src={each.isLiked ? "https://assets.ccbp.in/frontend/react-js/comments-app/liked-img.png" : "https://assets.ccbp.in/frontend/react-js/comments-app/like-img.png"} alt="" />
+                <p>{each.isLiked ? "Liked" : "Like"}</p>
+              </div>
+              <img onClick={() => { hanldeDelete(each.id) }} className="icon" src="https://assets.ccbp.in/frontend/react-js/comments-app/delete-img.png" alt="delete" />
             </div>
-            <img onClick={() => { hanldeDelete(each.id) }} className="icon" src="https://assets.ccbp.in/frontend/react-js/comments-app/delete-img.png" alt="delete" />
-          </div>
 
 
-        </div>
-      ))}
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
