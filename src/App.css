@@ -1,55 +1,74 @@
-body{
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-*{
+
+* {
   box-sizing: border-box;
 }
+.comments-heading{
+  font-family: "Roboto";
+  font-size: 50px;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.4msaZmSWaHLTteZr59mSwQHaEK%26pid%3DApi&f=1&ipt=0bf83275f37be5f74de277c0b195bb036608fc38923ec49c11dbb8c0bb198e29&ipo=images");
+  background-clip: text;
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  color: transparent;
+}
 
-
-.app-container{
-  background:linear-gradient(to bottom,skyblue,dodgerblue);
+.app-container {
+  background: linear-gradient(to bottom, skyblue, dodgerblue);
   min-height: calc(100vh - 17px);
   padding: 10px 10px;
   border-radius: 10px;
-  
+
 }
-.top-container{
+
+.top-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
-.input-container,form{
+
+.input-container,
+form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap:10px;
+  gap: 10px;
   align-items: start;
   background-color: white;
   width: inherit;
   border-radius: 10px;
   cursor: pointer;
 }
-.input-container{
+
+.input-container {
   padding: 10px
 }
-form{
+
+form {
   width: 100%;
 }
-h1{
+
+h1 {
   font-size: 24px;
   font-weight: 700;
   margin: 4px 0px;
 }
-h4{
+
+h4 {
   font-size: 18px;
   margin: 4px 0px;
 }
-.input-wrapper{
+
+.input-wrapper {
   position: relative;
   width: 100%;
 }
-.input{
+
+.input {
   width: 100%;
   height: 50px;
   outline: none;
@@ -57,17 +76,17 @@ h4{
   border-radius: 10px;
   box-sizing: border-box;
   border-width: 0px;
-  border:1px solid black;
+  border: 1px solid black;
   color: magenta;
   font-size: 18px;
   font-weight: 600;
-  
+
 }
 
-label{
+label {
   position: absolute;
   left: 0;
-  top:15px;
+  top: 15px;
   pointer-events: none;
   left: 10px;
   color: black;
@@ -75,71 +94,83 @@ label{
 }
 
 .input:valid+label,
-.input:focus+label{
-  top:-10px;
+.input:focus+label {
+  top: -10px;
   background: white;
-  color:magenta
+  color: magenta
 }
-button{
+
+button {
   width: 100%;
   height: 50px;
   cursor: pointer;
   outline: none;
   border-width: 0px;
   border-radius: 10px;
-  background:linear-gradient(90deg,dodgerblue 30%,magenta);
-  color:white;
+  background: linear-gradient(90deg, dodgerblue 30%, magenta);
+  color: white;
   font-size: 17px;
   font-weight: 600;
 }
-.image{
+
+.image {
   width: 100%;
   margin-top: 15px;
 }
-.hr{
+
+.hr {
   border: 1px solid grey;
   margin: 20px 10px;
 }
 
-.comment-length{
+.comment-length {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.length{
+
+.length {
   display: flex;
   justify-content: center;
   align-items: center;
-  background:linear-gradient(to right,dodgerblue,magenta);
+  background: linear-gradient(to right, dodgerblue, magenta);
   padding: 10px;
   width: 35px;
   height: 35px;
   font-size: 20px;
   border-radius: 4px;
-  color:white;
+  color: white;
   font-weight: 600;
 }
 
-.main-data{
-  background-color: white;
+.main-data {
+  background: #e0e0e0;
+  border-radius: 20px;
+
   margin: 10px 0px;
-  border-radius: 10px;
+
+  box-shadow:
+    8px 8px 16px #97a3de,
+    inset -8px -8px 16px #ffffff;
+
   padding: 5px 10px;
   cursor: pointer;
 }
 
-.data-container{
+.data-container {
   display: flex;
   align-items: center;
-  gap:10px;
-}
-.name-and-time{
-  display: flex;
-  align-items: center;
-  gap:10px
+  gap: 10px;
+
 }
 
-.initial{
+.name-and-time {
+  display: flex;
+  align-items: center;
+  gap: 10px
+}
+
+.initial {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -148,34 +179,43 @@ button{
   width: 30px;
   height: 30px;
 }
-.each-name,time,p{
+
+.each-name,
+time,
+p {
   margin: 4px 0px;
 }
-.bottom-container{
+
+.bottom-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.like-container{
+
+.like-container {
   display: flex;
   align-items: center;
-  gap:10px;
+  gap: 10px;
   cursor: pointer;
 }
-.icon{
+
+.icon {
   cursor: pointer;
   width: 20px;
   height: 20px;
 }
-@media screen and (min-width:768px){
-  .app-container{
-    background: linear-gradient(to right, skyblue,dodgerblue);
+
+@media screen and (min-width:768px) {
+  .app-container {
+    background: linear-gradient(to right, skyblue, dodgerblue);
   }
-  .top-container{
+
+  .top-container {
     flex-direction: row;
     justify-content: space-between;
   }
-  .initial{
+
+  .initial {
     width: 30px;
     height: 30px;
   }

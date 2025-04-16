@@ -84,7 +84,7 @@ const App = () => {
     <div className="app-container">
       <div className="top-container">
         <div className="input-container">
-          <h1>Comments</h1>
+          <h1 className="comments-heading">Comments</h1>
           <h4>Say Something About 4.0 Technologies</h4>
           <form onSubmit={addComment}>
             <div className="input-wrapper">
